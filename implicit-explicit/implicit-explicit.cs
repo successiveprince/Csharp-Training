@@ -10,6 +10,7 @@ namespace implicit_explicit
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
