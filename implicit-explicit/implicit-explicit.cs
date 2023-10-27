@@ -28,7 +28,7 @@ namespace implicit_explicit
             float salary = 1232.32f;
             int correctSalary = Convert.ToInt32(salary);
 
-            //--string to int
+            //--string to int with TryParse
             string weight = "23";
             int correctWeight;
             if (int.TryParse(weight, out correctWeight))
@@ -36,6 +36,10 @@ namespace implicit_explicit
                 correctWeight = Convert.ToInt32(weight);
                 Console.WriteLine(correctWeight);
             }
+
+            //--string to float with Parse
+            float fWeight = float.Parse(weight);
+            Console.WriteLine(fWeight);
 
             //--int to string
             int height = 76;
