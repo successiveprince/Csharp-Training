@@ -10,11 +10,11 @@ namespace Assignment_2
     {
         static void Main(string[] args)
         {
-            //Q1_BalancedIndex.BalancedIndex();
+            Q1_BalancedIndex.BalancedIndex();
 
-            //Q2_FindLeaders.FindLeaders();
+            Q2_FindLeaders.FindLeaders();
 
-            //Q3_LazyPerson.LazyPerson();
+            Q3_LazyPerson.LazyPerson();
 
             Q4_MaxSubarray.MaxSubarray();
 
