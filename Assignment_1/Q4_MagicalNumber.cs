@@ -14,20 +14,22 @@ namespace Assignment_1
             string input;
             Console.WriteLine("Enter Your Number: ");
             input = Console.ReadLine();
+            StringBuilder sb = new StringBuilder(input);
             string inputCopy = input;
             bool endProcess = false;
             int sum = 0;
+
             while (!endProcess)
             {
-                for (int i = 0; i < input.Length; i++)
+                for (int i = 0; i < sb.Length; i++)
                 {
-                    char ch = input[i];
-                    int num = int.Parse(ch.ToString());
+                    int num = sb[i] - '0';
                     sum += num;
                 }
                 if (sum >= 10)
                 {
-                    input = sum.ToString();
+                    sb.Clear();
+                    sb.Append(sum.ToString());
                     sum = 0;
                 }
                 else
