@@ -11,16 +11,21 @@ namespace Assignment_1
         public static void ShowPairs(int[] array, int size, int targetSum)
         {
             Console.WriteLine("Pairs with sum less than " + targetSum + ":");
-
+            bool flag = false;
             for (int i = 0; i < size - 1; i++)
             {
                 for (int j = i + 1; j < size; j++)
                 {
                     if (array[i] + array[j] < targetSum)
                     {
+                        flag = false;
                         Console.WriteLine("[{0},{1}] with indices ({2},{3})", array[i], array[j], i, j);
                     }
                 }
+            }
+            if(!flag)
+            {
+                Console.WriteLine("No Pairs Found!!!");
             }
         }
 
