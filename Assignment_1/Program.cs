@@ -11,19 +11,19 @@ namespace Assignment_1
 
         public static void Main(string[] args)
         {
-            Q1_PerfectNumber.IsPerfect();
+            //Q1_PerfectNumber.IsPerfect();
 
-            Q2_MinimumGap.FindMinimumGap();
+            //Q2_MinimumGap.FindMinimumGap();
 
-            Q3_FindPairs.FindPairs();
+            //Q3_FindPairs.FindPairs();
 
             Q4_MagicalNumber.CheckMagicalNumber();
 
-            Q5_RemoveSpaces.RemoveSpaces();
+            //Q5_RemoveSpaces.RemoveSpaces();
 
-            Q6_ThirdLargest.ThirdLargestValue();
+            //Q6_ThirdLargest.ThirdLargestValue();
 
-            Q7_ProductArray.ProductArray();
+            //Q7_ProductArray.ProductArray();
 
             Console.ReadKey();
         }

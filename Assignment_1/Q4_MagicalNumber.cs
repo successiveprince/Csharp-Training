@@ -15,7 +15,7 @@ namespace Assignment_1
             Console.WriteLine("Enter Your Number: ");
             input = Console.ReadLine();
             StringBuilder sb = new StringBuilder(input);
-            string inputCopy = input;
+            
             bool endProcess = false;
             int sum = 0;
 
@@ -38,9 +38,9 @@ namespace Assignment_1
                 }
             }
             if (sum == 1)
-                Console.WriteLine("{0} is a Magical Number.", inputCopy);
+                Console.WriteLine("{0} is a Magical Number.", input);
             else
-                Console.WriteLine("{0} is not a Magical Number.", inputCopy);
+                Console.WriteLine("{0} is not a Magical Number.", input);
         }
        
     }
