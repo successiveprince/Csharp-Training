@@ -15,7 +15,7 @@ namespace Assignment_2
             {
                 Console.WriteLine("\nEnter Your Choice:");
                 Console.WriteLine("1.Balanced Index\n2.Find Leaders\n3.Lazy Person\n4.Maximum Subarray\n5.Exit");
-                var ch = Console.ReadLine();
+                string ch = Console.ReadLine();
                 choice = int.Parse(ch);
 
                 switch (choice)
