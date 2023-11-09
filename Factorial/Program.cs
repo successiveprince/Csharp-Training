@@ -23,7 +23,7 @@ namespace Factorial
             string s =Console.ReadLine();
             int input;
             bool res = int.TryParse(s, out input);
-            if (res && input > 0)
+            if (res && input >= 0)
             {
                 Console.WriteLine("Factorial of {0} is {1}", input, FindFactorial(input));
             }
