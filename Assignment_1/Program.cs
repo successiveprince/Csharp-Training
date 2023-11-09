@@ -11,19 +11,47 @@ namespace Assignment_1
 
         public static void Main(string[] args)
         {
-            Q1_PerfectNumber.IsPerfect();
+            int choice;
+            do
+            {
+                Console.WriteLine("\nEnter Your Choice:");
+                Console.WriteLine("1.Perfect Number\n2.Minimum Gap\n3.Find Pairs Sum\n4.Magical Number\n5.Remove Spaces\n" +
+                    "6.Third Largest Number\n7.Product Array\n8.Exit");
+                var ch = Console.ReadLine();
+                choice = int.Parse(ch);
 
-            Q2_MinimumGap.FindMinimumGap();
-
-            Q3_FindPairs.FindPairs();
-
-            Q4_MagicalNumber.CheckMagicalNumber();
-
-            Q5_RemoveSpaces.RemoveSpaces();
-
-            Q6_ThirdLargest.ThirdLargestValue();
-
-            Q7_ProductArray.ProductArray();
+                switch (choice)
+                {
+                    case 1:
+                        Q1_PerfectNumber.IsPerfect();
+                        break;
+                    case 2:
+                        Q2_MinimumGap.FindMinimumGap();
+                        break;
+                    case 3:
+                        Q3_FindPairs.FindPairs();
+                        break;
+                    case 4:
+                        Q4_MagicalNumber.CheckMagicalNumber();
+                        break;
+                    case 5:
+                        Q5_RemoveSpaces.RemoveSpaces();
+                        break;
+                    case 6:
+                        Q6_ThirdLargest.ThirdLargestValue();
+                        break;
+                    case 7:
+                        Q7_ProductArray.ProductArray();
+                        break;
+                    case 8:
+                        Environment.Exit(1);
+                        break;
+                    default:
+                        Console.WriteLine("Enter Correct Option!!!");
+                        break;
+                }
+            }
+            while (choice != 8);
 
             Console.ReadKey();
         }
