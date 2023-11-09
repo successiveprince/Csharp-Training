@@ -22,7 +22,7 @@ namespace Assignment_2
                     sum = 0;
             }
             Console.WriteLine();
-            Console.WriteLine("Maximum Subarray sum is {0}", maxi);
+            Console.WriteLine("\nMaximum Subarray sum is {0}", maxi);
         }
         public static void MaxSubarray()
         {

@@ -58,7 +58,7 @@ namespace Assignment_2
                 Console.Write("{0} ", array[i]);
             }
             
-            Console.WriteLine("Balanced Index is {0}" , Find(array));
+            Console.WriteLine("\nBalanced Index is {0}" , Find(array));
         }
     }
 }

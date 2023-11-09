@@ -21,7 +21,7 @@ namespace Assignment_2
                     maxi = array[i];
                 }
             }
-            Console.WriteLine("Number of Leaders: {0}", count);
+            Console.WriteLine("\nNumber of Leaders: {0}", count);
         }
         public static void FindLeaders()
         {

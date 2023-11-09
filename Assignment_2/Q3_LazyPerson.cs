@@ -28,7 +28,7 @@ namespace Assignment_2
                 count++;
             }
             Console.WriteLine();
-            Console.WriteLine("Minimun Number of Switch a person press : {0}", count);
+            Console.WriteLine("\nMinimun Number of Switch a person press : {0}", count);
         }
         public static void LazyPerson()
         {
