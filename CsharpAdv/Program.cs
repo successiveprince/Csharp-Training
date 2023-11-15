@@ -25,7 +25,9 @@ namespace CsharpAdv_Day2
 
             //Generics<string> G1 = new Generics<string>("Hello");
             //G1.TestFunction("World");
-            var GG = new Generics<CreateInstance>();
+
+
+            var GG = new Generics<CreateInstance>();            //Constraints for new()
             GG.CreateInstance();
 
 

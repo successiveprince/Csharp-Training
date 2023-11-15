@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CsharpAdv_Day2
 {
-    public class Generics<T> where T: new()
+    public class Generics<T> where T: new()         //Generics Constraints -> new()
     {
         public T variable;
 
