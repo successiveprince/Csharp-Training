@@ -6,56 +6,76 @@ using System.Threading.Tasks;
 
 namespace OOPs_Project
 {
-    class Course
+    class Course : CourseSubject
     {
         public int courseId { get; set; }
         public string courseName { get; set; }
         public string courseCode { get; set; }
         public string courseSubject { get; set; }
 
-        private List<CourseSubject> _students = new List<CourseSubject>();
+        private static List<CourseSubject> _subjects = new List<CourseSubject>();
         public Course()
         {
             CourseSubject cs = new CourseSubject();
             cs.subjectId = 01;
             cs.subjectName = "English";
             cs.subjectCode = "E01";
-            _students.Add(cs);
+            _subjects.Add(cs);
         }
-        public List<CourseSubject> Students
+        public static List<CourseSubject> Subjects
         {
             get
             {
-                return _students;
+                return _subjects;
             }
         }
         public void AddSubject(CourseSubject subject)
         {
-            _students.Add(subject);
+            string s_id = "";
+            int cs_id = 0;
+            Console.WriteLine("Enter Subject id");
+            s_id = Console.ReadLine();
+            while (s_id.Length == 0)
+            {
+                Console.WriteLine("Invalid input,Please enter again");
+                s_id = Console.ReadLine();
+            }
+            while (!int.TryParse(s_id, out cs_id))
+            {
+                Console.WriteLine("Invalid input,Please enter again");
+                s_id = Console.ReadLine();
+            }
+            subject.subjectId = cs_id;
+
+            string s_code = "";
+            Console.WriteLine("Enter Subject Code");
+            s_code = Console.ReadLine();
+            while (s_code.Length == 0)
+            {
+                Console.WriteLine("Invalid input,Please enter again");
+                s_code = Console.ReadLine();
+            }
+            subject.subjectCode = s_code;
+
+            string s_name = "";
+            Console.WriteLine("Enter Subject Name");
+            s_name = Console.ReadLine();
+            while (s_name.Length == 0)
+            {
+                Console.WriteLine("Invalid input,Please enter again");
+                s_name = Console.ReadLine();
+            }
+            subject.subjectName = s_name;
+
+            _subjects.Add(subject);
         }
         public void RemoveSubject(CourseSubject subject)
         {
-            _students.Remove(subject);
+            _subjects.Remove(subject);
         }
         public void AddSubject(List<CourseSubject> subjectList)
         {
-            _students.AddRange(subjectList);
-        }
-
-        public static void CourseData()
-        {
-            Student s = new Student();
-            Console.WriteLine("Enter Course Id:");
-            int id = int.Parse(Console.ReadLine());
-
-            Console.WriteLine("Enter Course's Name:");
-            var name = Console.ReadLine();
-
-            Console.WriteLine("Enter Course's Code:");
-            var code = Console.ReadLine();
-
-            Console.WriteLine("Enter Course's Subject:");
-            var subject = Console.ReadLine();
+            _subjects.AddRange(subjectList);
         }
     }
 }
