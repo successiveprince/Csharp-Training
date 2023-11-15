@@ -16,7 +16,7 @@ namespace Struct_Interface
     }
     struct MyStructure : Interface1 , Interface2
     {
-        void Interface1.Display()
+        public void Display()
         {
             Console.WriteLine("This is Interface 1");
         }
@@ -29,13 +29,12 @@ namespace Struct_Interface
     {
         static void Main(string[] args)
         {
-            Interface1 A1;
-            Interface2 A2;
-
-            A1 = new MyStructure();
-            A2 = new MyStructure();
-
+            MyStructure A1 = new MyStructure();
             A1.Display();
+
+            //using dynamic binding(late binding)
+            Interface2 A2;
+            A2 = new MyStructure();
             A2.Show();
 
             Console.ReadKey();
