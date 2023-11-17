@@ -13,10 +13,11 @@ namespace OOPs_Project
             List<Student> studentList = new List<Student>();
 
             int choice = -1;
+            Console.WriteLine("--------Welcome to the OOPs Universe---------");
             do
             {
-                Console.WriteLine("--------Welcome to the OOPs Universe---------");
-                Console.WriteLine("Choose Your Option:");
+                
+                Console.WriteLine("\nChoose Your Option:");
                 Console.WriteLine("1.Add Subject");
                 Console.WriteLine("2.Add Course");
                 Console.WriteLine("3.Add Student");
@@ -61,7 +62,7 @@ namespace OOPs_Project
                                 checkLoop1 = true;
                             }
                         }
-                        Console.WriteLine("Subject added Successfully!!!");
+                        Console.WriteLine("Subject added Successfully!!!\n");
                         
                         break;
                     case 2:
@@ -79,7 +80,7 @@ namespace OOPs_Project
                                 checkLoop2 = true;
                             }
                         }
-                        Console.WriteLine("Course added Successfully!!!");
+                        Console.WriteLine("Course added Successfully!!!\n");
                         break;
                     case 3:
                         Console.WriteLine("Enter Student's Id : ");
@@ -116,7 +117,7 @@ namespace OOPs_Project
                         Console.WriteLine("CourseId\tCourseName\tCourseSubject\tCourseCode\n");
                         foreach (var temp in Student.Courses)
                         {
-                            Console.WriteLine("{0}\t\t{1}\t\t{2}\t{3}", temp.courseId, temp.courseName, temp.courseSubject , temp.courseCode);
+                            Console.WriteLine("{0}\t\t{1}\t{2}\t{3}", temp.courseId, temp.courseName, temp.courseSubject , temp.courseCode);
                         }
 
                         break;
@@ -125,7 +126,7 @@ namespace OOPs_Project
                         Console.WriteLine("StudentId\tStudentName\tStudentCode\tStudentCourse\n");
                         foreach (var temp in studentList)
                         {
-                            Console.WriteLine("{0}\t{1}\t{2}\t{3}", temp.studentId, temp.studentName, temp.studentCode, temp.studentCourse);
+                            Console.WriteLine("{0}\t\t{1}\t\t{2}\t\t{3}", temp.studentId, temp.studentName, temp.studentCode, temp.studentCourse);
 
                         }
 
@@ -172,7 +173,7 @@ namespace OOPs_Project
                             Console.WriteLine("CourseId\tCourseName\tCourseSubject\tCourseCode\n");
                             foreach (var temp in foundCourses)
                             {
-                                Console.WriteLine("{0}\t\t{1}\t\t{2}\t{3}", temp.courseId, temp.courseName, temp.courseSubject, temp.courseCode);
+                                Console.WriteLine("{0}\t\t{1}\t\t{2}\t\t{3}", temp.courseId, temp.courseName, temp.courseSubject, temp.courseCode);
                             }
                         }
                         else
@@ -215,7 +216,7 @@ namespace OOPs_Project
                 }
 
             }
-            while(choice != -1);
+            while(choice != int.MaxValue);
 
             Console.ReadKey();
         }

@@ -14,7 +14,7 @@ namespace OOPs_Project
         public string courseSubject { get; set; }
 
         private static List<CourseSubject> _subjects = new List<CourseSubject>();
-        public Course()
+        static Course()
         {
             CourseSubject cs = new CourseSubject();
             cs.subjectId = 01;

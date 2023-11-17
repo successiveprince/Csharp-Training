@@ -15,7 +15,7 @@ namespace OOPs_Project
 
         private static List<Course> _courses = new List<Course>();
 
-        public Student()
+        static Student()
         {
             Course c = new Course();
             c.courseId = 1001;
