@@ -10,16 +10,24 @@ namespace AdvanceTraining
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welocme He Who Remains");
+            //Console.WriteLine("Welocme He Who Remains");
+
+            //-----------Exception Handling-----------------
             ExceptionHandling A = new ExceptionHandling();
 
             //  A.MyDivByZeroException();
-            A.MyNullReferenceException();
+            //A.MyNullReferenceException();
             // A.MyIndexOutOfRangeException();         
             // A.MyFormatException();
 
-           // A.CheckMarks();
-           
+            // A.CheckMarks();
+
+
+            //-------------Deligates------------------
+           // MyDelegates.Method();
+
+            GenericDelegate.Method();
+
             Console.ReadKey();
         }
     }

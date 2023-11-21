@@ -20,29 +20,33 @@ namespace CsharpAdv_Day2
             //var ans = compare.IsEqual<string>("ads", "aa");
             //Console.WriteLine(ans);
 
-            //Generics<int> G = new Generics<int>(50);
+
+
+            //---------------Generics---------------------
+
+            //Generics<int> G = new Generics<int>(89);
             //G.TestFunction(100);
 
-            //Generics<string> G1 = new Generics<string>("Hello");
+            //Generics<string> G1 = new Generics<string>("maxx");
             //G1.TestFunction("World");
 
+            MyGenericClass MG = new MyGenericClass();
+            MG.GenericMethod<int, string>(10, "Hello");
 
-            //var GG = new Generics<CreateInstance>();            //Constraints for new()
-            //GG.CreateInstance();
 
 
             //-------Generic and Non-Generic Collections---------
 
-            Generic_NonGeneric_Collections A = new Generic_NonGeneric_Collections();
+            //Generic_NonGeneric_Collections A = new Generic_NonGeneric_Collections();
 
-            A.OneDimArray();
-            A.MyArrayList();
-            A.MyHashTable();
-            A.MyQueue();
-            A.MyStack();
-            A.myList();
-            A.MyDictionary();
-            A.MyQueueGeneric();
+            //A.OneDimArray();
+            //A.MyArrayList();
+            //A.MyHashTable();
+            //A.MyQueue();
+            //A.MyStack();
+            //A.myList();
+            //A.MyDictionary();
+            //A.MyQueueGeneric();
 
             Console.ReadKey();
         }

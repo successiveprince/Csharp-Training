@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace CsharpAdv_Day2
 {
-    public class Generics<T> where T: new()         //Generics Constraints -> new()
+    public class Generics<T>        //Generic Class
     {
         public T variable;
 
         public T MyMethod { get; set; }
 
-        //public Generics(T value)
-        //{
-        //    variable = value;
-        //    MyMethod = value;
-        //}
+        public Generics(T value)
+        {
+            variable = value;
+            MyMethod = value;
+        }
 
         public T TestFunction(T para)
         {
@@ -24,24 +24,15 @@ namespace CsharpAdv_Day2
             Console.WriteLine("Return type: {0} , value: {1}", typeof(T).ToString(), variable);
 
             return variable;
-        }
-        //public Generics()
-        //{
-        //    Console.WriteLine("New Instnace Created!!!");
-        //}
-
-        public T CreateInstance()
-        {
-            
-            return new T();
-        }
+        }      
     }
-
-    class CreateInstance
+    public class MyGenericClass
     {
-        public CreateInstance()
+        public void GenericMethod<T1, T2>(T1 Param1, T2 Param2)         //Generics Methods
         {
-            Console.WriteLine("New Instance Created!!!");
+            Console.WriteLine($"Parameter T1 type: {typeof(T1)}: Parameter T2 type: {typeof(T2)}");
+            Console.WriteLine($"Parameter 1: {Param1} : Parameter 2: {Param2}");
         }
     }
+
 }
