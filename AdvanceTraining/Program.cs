@@ -24,9 +24,9 @@ namespace AdvanceTraining
 
 
             //-------------Deligates------------------
-           // MyDelegates.Method();
+            MyDelegates.Method();
 
-            GenericDelegate.Method();
+           // GenericDelegate.Method();
 
             Console.ReadKey();
         }

@@ -23,14 +23,14 @@ namespace AdvanceTraining
 
         public static void Method()
         {
-            Func<int, float, double, double> del1 = new Func<int, float, double, double>(AddNums1);
+            Func<int, float, double, double> del1 = new Func<int, float, double, double>(AddNums1);     // Func
             double res = del1(12, 54.55f, 1764.883);
             Console.WriteLine(res);
 
-            Action<int, float, double> del2 = new Action<int, float, double>(AddNums2);
+            Action<int, float, double> del2 = new Action<int, float, double>(AddNums2);                 // Action
             del2(12, 54.55f, 1764.883);
 
-            Predicate<string> del3 = new Predicate<string>(CheckLength);    // or Func<string, bool>
+            Predicate<string> del3 = new Predicate<string>(CheckLength);    // or Func<string, bool>    // Predicate
             Console.WriteLine(del3("Akshat"));
 
             Console.ReadKey();
