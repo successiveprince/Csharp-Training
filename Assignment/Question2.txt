@@ -1,4 +1,4 @@
-﻿Question 2 -> When should we write multiple catch blocks for a Single Try block? 
+﻿﻿Question 2 -> When should we write multiple catch blocks for a Single Try block? 
 
 Answer -> We should write multiple catch block for a single try block when we want to handle different types of 
 		  exceptions in different ways.Each catch block can be used to catch a specific type of exception, allowing 

@@ -12,7 +12,7 @@ namespace Assignment
     {
         public delegate void MyPercentage(float marks, int totalMarks);         // Defining Delegate
 
-        public void FindPercentage(float marks , int totalMarks)
+        public void FindPercentage(float marks, int totalMarks)
         {
             Console.WriteLine("Percentage : " + (marks / totalMarks) * 100);
         }

@@ -19,7 +19,7 @@ namespace Assignment
                 for (int i = 0; i < 10; i++)
                 {
                     Console.WriteLine(" Method 1, thread = {0}", Thread.CurrentThread.ManagedThreadId);
-                   
+
                     Task.Delay(100);
                 }
             });
@@ -29,7 +29,7 @@ namespace Assignment
             for (int i = 0; i < 5; i++)
             {
                 Console.WriteLine(" Method 2, thread = {0}", Thread.CurrentThread.ManagedThreadId);
-                
+
                 Task.Delay(100);
             }
         }

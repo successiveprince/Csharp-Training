@@ -10,15 +10,20 @@ namespace Assignment
     {
         static void Main(string[] args)
         {
-            //TryCatch.Call();
+            // Question 1
+            TryCatch.Call();
 
-            //Delegates.MyMethod();
+            // Question 3
+            Delegates.MyMethod();   
 
-            //GenericDelegate.Method();
+            //Question 4
+            GenericDelegate.Method(); 
 
-            //CheckOutput.CallMethod1();
-            //CheckOutput.CallMethod2();
+            //Question 5
+            CheckOutput.CallMethod1();
+            CheckOutput.CallMethod2();
 
+            //Question 6
             Async_Await.Method1();
             Async_Await.Method2();
 
