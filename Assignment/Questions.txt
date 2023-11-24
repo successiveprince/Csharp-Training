@@ -1,0 +1,28 @@
+﻿Assignment -> 23-11-2023
+
+1) Write a small program where you need to implement a Try and Catch Block . 
+
+2) When should we write multiple catch blocks for a Single Try block? 
+
+3) How to define a delegate and call any method or event using it? 
+
+4) Try to use Func, Action and Predicate any program. 
+
+5) What will be the output of below code snipped : 
+    
+static void Main()
+{
+  Func <string,string> output=delegate(string name)
+{
+  return "Hello" + name;
+};
+Console.Write(output("James"));
+}
+
+static void Main()
+{
+  Action <int> output = i=>Console.Write(i);
+  output(10);
+}
+
+6) Write a program to implement Async await with proper justification. 
