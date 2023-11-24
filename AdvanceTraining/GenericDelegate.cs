@@ -8,30 +8,31 @@ namespace AdvanceTraining
 {
     class GenericDelegate
     {
-        public static double AddNums1(int x, float y, double z)
+        public static float MyAverage(float x, float y, float z)
         {
-            return x + y + z;
+            return (x + y + z) / 3;
         }
-        public static void AddNums2(int x, float y, double z)
+        public static void MyPercentage(float marks, int totalMarks)
         {
-            Console.WriteLine(x + y + z);
+            Console.WriteLine("Percentage is " + (marks / totalMarks) * 100);
         }
-        public static bool CheckLength(string str)
+        public static bool CheckLengthOfString(string input)
         {
-            return str.Length > 5;
+            return input.Length > 10;
         }
 
         public static void Method()
         {
-            Func<int, float, double, double> del1 = new Func<int, float, double, double>(AddNums1);     // Func
-            double res = del1(12, 54.55f, 1764.883);
-            Console.WriteLine(res);
+            Func<float, float, float, float> myDele1 = new Func<float, float, float, float>(MyAverage);             // Func
+            float ans = myDele1(120f, 85.4f, 100f);
+            Console.WriteLine("Average is " + ans);
 
-            Action<int, float, double> del2 = new Action<int, float, double>(AddNums2);                 // Action
-            del2(12, 54.55f, 1764.883);
+            Action<float, int> myDele2 = new Action<float, int>(MyPercentage);                                     // Action
+            myDele2(68.5f, 100);
 
-            Predicate<string> del3 = new Predicate<string>(CheckLength);    // or Func<string, bool>    // Predicate
-            Console.WriteLine(del3("Akshat"));
+            Predicate<string> myDele3 = new Predicate<string>(CheckLengthOfString);                                 // Predicate
+            Console.WriteLine("Size of \'Prince Kumar\' is greater than 10? " + myDele3("Prince Kumar"));
+        
 
             Console.ReadKey();
         }
