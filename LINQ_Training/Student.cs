@@ -42,6 +42,7 @@ namespace LINQ_Training
             var avg = studentList.Average(s => s.Age);                              // Average
             Console.WriteLine("\nAverage of age : " + avg);
 
+            Console.WriteLine("\n------------ OrderBy & OrderByDescending ---------------");
             var sortAsc = studentList.OrderBy(s => s.StudentName);                  // OrderBy
             var sortDesc = studentList.OrderByDescending(s => s.StudentName);       // OrderByDescending
 
@@ -56,6 +57,7 @@ namespace LINQ_Training
                 Console.WriteLine(d.StudentName);
             }
 
+            Console.WriteLine("\n------------ ThenBy & ThenByDescending ---------------");
             var secondLevelSortAsc = studentList.OrderBy(s => s.StudentName).ThenBy(s => s.Age);                       // ThenBy
             var secondLevelSortDesc = studentList.OrderByDescending(s => s.StudentName).ThenByDescending(s => s.Age);  // ThenByDescending
 
@@ -70,6 +72,7 @@ namespace LINQ_Training
                 Console.WriteLine("{0} : {1} ", d.StudentName, d.Age);
             }
 
+            Console.WriteLine("\n------------ Skip Take SkipWhile & TakeWhile ---------------");
             var skip = studentList.Skip(2);                                             // Skip
             var take = studentList.Take(3);                                             // Take
             var skipWhile = studentList.SkipWhile(s => s.Age >= 20);                    // SkipWhile
@@ -96,12 +99,26 @@ namespace LINQ_Training
                 Console.WriteLine(i.StudentName);
             }
 
-            List<int> marks = new List<int>() { 7, 10, 21, 30, 45, 50, 87 };
-            List<string> number = new List<string>() { null, "Two", "Three", "Four", "Five" };
+            List<int> marks = new List<int>() { 7 , 10 , 23 , 21 , 32 , 34};
+            List<string> number = new List<string>() { null, "Two", "Three", "Four", "Five" , null };
+            List<string> emptyList = new List<string>();
+            List<int> age = new List<int>() { 22 };
 
-            Console.WriteLine("\n1st Element in marks : {0}", marks.First(s=> s % 2 == 0));
-            Console.WriteLine("\n1st Element in marks : {0}", number.First());
-            Console.WriteLine("\n1st Element in marks : {0}", number.FirstOrDefault();
+            Console.WriteLine("\n------------ First & FirstOrDefault ---------------");
+            Console.WriteLine("\n1st Even Element in marks : {0}", marks.First(s=> s % 2 == 0));                    // First & FirstOrDefault
+            Console.WriteLine("\n1st Element in marks : {0}", marks.First());
+            Console.WriteLine("\n1st Element of string list (that is null) using First() : " + number.First());
+            Console.WriteLine("\nFirstOrDefault : {0}", marks.FirstOrDefault(s => s == 100));
+
+            Console.WriteLine("\n------------ Last & LastOrDefault ---------------");
+            Console.WriteLine("\nLast Element in marks : " + marks.Last());                                                  // Last & LastOrDefault
+            Console.WriteLine("\nLastOrDefault : " + marks.LastOrDefault(s => s == 32));
+            Console.WriteLine("\nLast Element in number : " + number.Last());
+
+            Console.WriteLine("\n------------ Single & SingleOrDefault ---------------");
+            Console.WriteLine("\nAge using Single() : {0}", age.Single());
+            Console.WriteLine("\nSingleOrDefault : " + emptyList.SingleOrDefault());
+
         }
     }
 }
