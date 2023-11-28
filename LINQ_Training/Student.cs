@@ -99,6 +99,7 @@ namespace LINQ_Training
                 Console.WriteLine(i.StudentName);
             }
 
+
             List<int> marks = new List<int>() { 7 , 10 , 23 , 21 , 32 , 34};
             List<string> number = new List<string>() { null, "Two", "Three", "Four", "Five" , null };
             List<string> emptyList = new List<string>();
@@ -111,11 +112,11 @@ namespace LINQ_Training
             Console.WriteLine("\nFirstOrDefault : {0}", marks.FirstOrDefault(s => s == 100));
 
             Console.WriteLine("\n------------ Last & LastOrDefault ---------------");
-            Console.WriteLine("\nLast Element in marks : " + marks.Last());                                                  // Last & LastOrDefault
+            Console.WriteLine("\nLast Element in marks : " + marks.Last());                                         // Last & LastOrDefault
             Console.WriteLine("\nLastOrDefault : " + marks.LastOrDefault(s => s == 32));
             Console.WriteLine("\nLast Element in number : " + number.Last());
 
-            Console.WriteLine("\n------------ Single & SingleOrDefault ---------------");
+            Console.WriteLine("\n------------ Single & SingleOrDefault ---------------");                           // Single & SingleOrDefault
             Console.WriteLine("\nAge using Single() : {0}", age.Single());
             Console.WriteLine("\nSingleOrDefault : " + emptyList.SingleOrDefault());
 
