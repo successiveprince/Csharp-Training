@@ -14,6 +14,7 @@ namespace LINQ_Training
 
             var name = names.Where(x => x.Contains('a'));
 
+            Console.WriteLine("LINQ");
             Console.WriteLine("Names with letter \'a\' :");
             foreach (var i in name)
             {
