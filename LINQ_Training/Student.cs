@@ -6,12 +6,7 @@ using System.Threading.Tasks;
 
 namespace LINQ_Training
 {
-    public class Student
-    {
-        public int StudentID { get; set; }
-        public string StudentName { get; set; }
-        public int Age { get; set; }
-    }
+   
     public class MyClass
     {
         public static void Method()
@@ -21,10 +16,10 @@ namespace LINQ_Training
                 new Student() {StudentID = 1 , StudentName = "Prince" , Age = 22},
                 new Student() {StudentID = 2 , StudentName = "Akshat" , Age = 20},
                 new Student() {StudentID = 3 , StudentName = "Ajay" , Age = 23},
-                new Student() {StudentID = 4 , StudentName = "Utkarsh" , Age = 21},
-                new Student() {StudentID = 5 , StudentName = "Yash" , Age = 25},
+                new Student() {StudentID = 4 , StudentName = "Utkarsh" , Age = 17},
+                new Student() {StudentID = 5 , StudentName = "Yash" , Age = 16},
                 new Student() {StudentID = 6 , StudentName = "Govind" , Age = 19},
-                new Student() {StudentID = 7 , StudentName = "Prince" , Age = 18}
+                new Student() {StudentID = 7 , StudentName = "Prince" , Age = 15}
             };
 
             var oldest = studentList.Max(s => s.Age);                               // MAX
@@ -104,6 +99,7 @@ namespace LINQ_Training
             List<string> number = new List<string>() { null, "Two", "Three", "Four", "Five" , null };
             List<string> emptyList = new List<string>();
             List<int> age = new List<int>() { 22 };
+            List<int> score = new List<int> { 2, 62, 12 , 7, 21 };
 
             Console.WriteLine("\n------------ First & FirstOrDefault ---------------");
             Console.WriteLine("\n1st Even Element in marks : {0}", marks.First(s=> s % 2 == 0));                    // First & FirstOrDefault
@@ -120,6 +116,34 @@ namespace LINQ_Training
             Console.WriteLine("\nAge using Single() : {0}", age.Single());
             Console.WriteLine("\nSingleOrDefault : " + emptyList.SingleOrDefault());
 
+
+            Console.WriteLine("\n------------ Element & ElementAtOrDefault ---------------");                         // Element & ElementAtOrDefault
+            Console.WriteLine("\nAge at ElementAt(0) : {0}", age.ElementAt(0));
+            Console.WriteLine("\nAge at ElementAtOrDefault(2) : {0}  -> Default value of int" , age.ElementAtOrDefault(2));
+
+
+            Console.WriteLine("\n------------ Any & All ---------------");
+            bool notAdultAll = studentList.All(s => s.Age < 18);
+            Console.WriteLine(notAdultAll);
+
+            bool notAdultAny = studentList.Any(s => s.Age < 18);
+            Console.WriteLine(notAdultAny);
+
+
+
+            Console.WriteLine("\n------------ Concat ---------------");
+            var concatList = marks.Concat(score);
+            foreach (int i in concatList)
+                Console.WriteLine(i);
+
+
+
+            Console.WriteLine("\n------------- Join -------------");
+            var joinMarks = marks.Join(score, value1 => value1 , value2 => value2 , (value1 , value2) => value1);
+            foreach (var value in joinMarks)
+            {
+                Console.WriteLine("{0} ", value);
+            }
         }
     }
 }
