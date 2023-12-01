@@ -24,10 +24,10 @@ namespace LINQ_Training
 
             Console.WriteLine("Age below 18 :");
             var teenAger = studentList.Where(s => s.Age < 18).Select(s => new { Age = s.Age, Name = s.StudentName });
-            
-            foreach(var i in teenAger)
+
+            foreach (var i in teenAger)
             {
-                Console.WriteLine("{0} : {1}" , i.Name , i.Age);
+                Console.WriteLine("{0} : {1}", i.Name, i.Age);
             }
 
             Console.WriteLine("\nAfter adding one more element : ");
@@ -40,22 +40,49 @@ namespace LINQ_Training
             }
 
             Console.WriteLine("\n--------- Immediate Execution -----------\n");
-            var greaterAge = studentList.Where(s => s.Age > 18).Select(s => new { Age = s.Age , Name = s.StudentName}).ToList();
+            var greaterAge = studentList.Where(s => s.Age > 18).Select(s => new { Age = s.Age, Name = s.StudentName }).ToList();
 
             Console.WriteLine("Age above 18 :");
             foreach (var i in greaterAge)
             {
-                Console.WriteLine("{0} : {1}" , i.Name , i.Age);
+                Console.WriteLine("{0} : {1}", i.Name, i.Age);
             }
 
             Console.WriteLine("\nAfter adding one more element : ");
             studentList.Add(new Student() { StudentID = 8, StudentName = "Goku", Age = 24 });
 
             Console.WriteLine("Age above 18 :");
-            foreach (var i in teenAger)
+            foreach (var i in greaterAge)
             {
                 Console.WriteLine("{0} : {1}", i.Name, i.Age);
             }
+
+
+            Console.WriteLine("\n--------- GroupBy -----------\n");
+            var groupedAge = studentList.GroupBy(s => s.Age);
+
+            foreach (var ageGroup in groupedAge)
+            {
+                Console.WriteLine("Age Group : {0}", ageGroup.Key);
+                foreach (var student in ageGroup)
+                {
+                    Console.WriteLine("Student Name : {0}", student.StudentName);
+                }
+            }
+
+
+            Console.WriteLine("\n--------- ToLookUp -----------\n");
+            var lookupAge = studentList.ToLookup(s => s.Age);
+
+            foreach (var ageLookup in lookupAge)
+            {
+                Console.WriteLine("Age Group : {0}", ageLookup.Key);
+                foreach (var student in ageLookup)
+                {
+                    Console.WriteLine("Student Name : {0}", student.StudentName);
+                }
+            }
+
         }
     }
 }

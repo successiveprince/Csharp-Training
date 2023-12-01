@@ -19,13 +19,13 @@ namespace LINQ_Training
             //BasicQuery.Method();
 
 
-            MyClass.Method();                                               // Aggregate Functions in LINQ
+            //MyClass.Method();                                               // Aggregate Functions in LINQ
 
 
             //Queries.Method();
 
 
-            //MyQueryClass.Method();
+            MyQueryClass.Method();
 
 
             Console.ReadKey();
